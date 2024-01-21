@@ -78,3 +78,73 @@
 
 // console.log(addNumbers(...numbers));
 
+//------------Debounce and throttel
+// Debounce----concept-------
+
+// function ad(val){
+//     console.log(val);
+// }
+
+// function as(fn){
+//     return fn()
+// }
+// as(ad(5))
+// let counter =0;
+
+// function data(){
+//     console.log("tiem to call ", counter++);
+// }
+
+// function impDebounce(call,d){
+//     let timer;
+//    return function(...arg){
+//     if(timer) clearTimeout(timer)
+//     timer=setTimeout(()=>{
+//         call()
+//     },d)
+//    }
+// }
+
+// const Debounce = impDebounce(data,100)
+
+// Clousers
+
+// const sum = function(a,b){
+//     console.log("Grab all those things");
+//     return function(...arg){
+//         setTimeout(()=>{
+//             console.log(Object.assign({},arg));
+//         },2000)
+//     }
+// }
+// const res =sum(2,2)
+// res(1,1)
+
+
+// Throttiling------
+
+// const myThrotle =(fn,d)=>{
+//     return function(...arg){
+//         document.getElementById("btn").disabled=true
+//         setTimeout(()=>{
+//             fn()
+//         },d)
+//     }
+// }
+
+// const newFun =myThrotle(()=>{
+//     document.getElementById("btn").disabled=false
+//     console.log("User clicked");
+// },2000)
+
+
+// infinite curring
+
+// function add(a) {
+//     return function(b) {
+//         if (!b) return a; 
+//         return add(a + b); 
+//     }
+// }
+
+// console.log(add(1)(2)(3)(5));
